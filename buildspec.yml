@@ -22,4 +22,4 @@ phases:
       - echo Writing image definitions file...
       - printf '[{"name":"%s","imageUri":"%s"}]' "$IMAGE_REPO_NAME" "$REPOSITORY_URI:$IMAGE_TAG" > imagedefinitions.json
 artifacts:
-    files: '**/*'
+    files: imagedefinitions.json
