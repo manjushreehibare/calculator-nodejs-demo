@@ -1,6 +1,10 @@
 version: 0.2
 
 phases:
-  build:
+  pre_build:
     commands:
-      - echo "Hello World"
+      - echo "Hello world"
+      - printf '[{"name":"calculator-task","imageUri":"%s"}]' 381491838685.dkr.ecr.ap-south-1.amazonaws.com/calculator-nodejs-demo:latest > imagedefinitions.json
+artifacts:
+    files: [imagedefinitions.json]
+    discard-paths: yes
