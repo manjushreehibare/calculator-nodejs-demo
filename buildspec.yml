@@ -15,5 +15,5 @@ phases:
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
       - printf '[{"name":"calculator-task","imageUri":"%s"}]' 381491838685.dkr.ecr.ap-south-1.amazonaws.com/calculator-nodejs-demo:latest > imagedefinitions.json 
 artifacts:
-  files: imagedefinitions.json
+  files: [imagedefinitions.json]
   discard-paths: yes
