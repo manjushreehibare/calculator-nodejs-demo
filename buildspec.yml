@@ -21,9 +21,3 @@ phases:
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
       - echo '[{"name":"calculator-task","imageUri":"%s"}]' 381491838685.dkr.ecr.ap-south-1.amazonaws.com/calculator-nodejs-demo:latest > imagedefinitions.json
-
-
-artifacts:
-  files: 
-    -'imagedefinitions.json'
-  discard-paths: yes
