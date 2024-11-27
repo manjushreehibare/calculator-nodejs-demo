@@ -20,10 +20,10 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - echo '[{"name":"%s","imageUri":"%s"}]' $IMAGE_URI:$IMAGE_TAG > imagedefinitions.json
+      - echo '[{"name":"cal-container","imageUri":"%s"}]' $IMAGE_URI:$IMAGE_TAG > imagedefinitions.json
 
 
 artifacts:
   files: 
-    -'sample-nodejs-app/imagedefinitions.json'
+    -'**/*'
   discard-paths: yes
